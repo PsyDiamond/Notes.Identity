@@ -19,10 +19,10 @@ namespace Notes.Identity
         {
             // Конфигурация IdentityServer
             services.AddIdentityServer()
-                .AddInMemoryApiResources(new List<ApiResource>())
-                .AddInMemoryIdentityResources(new List<IdentityResource>())
-                .AddInMemoryApiScopes(new List<ApiScope>())
-                .AddInMemoryClients(new List<Client>())
+                .AddInMemoryApiResources(Configuration.ApiResources)
+                .AddInMemoryIdentityResources(Configuration.IdentityResources)
+                .AddInMemoryApiScopes(Configuration.ApiScopes)
+                .AddInMemoryClients(Configuration.Clients)
                 .AddDeveloperSigningCredential();
         }
 
