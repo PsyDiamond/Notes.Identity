@@ -8,10 +8,12 @@
     <div class="block">
         <label>UserName</label>
         <input asp-for="UserName" class="input"/>
+        <span asp-validation-for="UserName"></span>
     </div>
     <div class="block">
         <label>Password</label>
         <input asp-for="Password" class="input"/>
+        <span asp-validation-for="Password"></span>
     </div>
     <div class="block">
         <button type="submit" class="button">Sign In</button>
